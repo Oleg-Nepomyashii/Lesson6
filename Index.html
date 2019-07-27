@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+				<script>
+			// 1 task
+
+			function isCharPrecent(str , symbol) {
+				for (var i =  0 ; i < str.length ; i++) {
+    					if (str.charAt(i) === symbol ) {
+        					return true;
+   						 }
+				}
+
+				return false;
+
+				// Альтернатива,делал для практики :)
+
+				/*if (str.includes(symbol)){
+					return true;
+				} else {
+					return false;
+				}*/	
+			}
+
+			console.log(isCharPrecent('ololo', '*'));
+
+			// 2 task
+
+			function charIndexOf(str, symbol) {
+				for (var i =  0 ; i < str.length ; i++) {
+    					if (str.charAt(i) === symbol ) {
+        					return i;
+   						 }
+				}
+
+				return -1;
+
+				// Альтернатива,делал для практики :)
+
+				/*return str.indexOf(symbol);*/
+			}
+
+			console.log(charIndexOf('ololo*', '*'));
+
+
+			// 3 task
+
+			userName = {
+				name: 'Lera' ,
+				age: 27 ,
+				brother: {
+					name: 'Valera',
+					age: 16 ,
+					friend: {
+						name: 'Vasya',
+						age: 16 ,
+						friend:'Petya',
+					},
+				} ,
+			}
+
+			var newUser = new Object;
+
+
+			function objectClone(a, b) {
+				for(var key in userName){
+					newUser[key] = userName[key];
+				}
+				
+				return newUser;
+			}
+
+			console.log(objectClone(userName , newUser));
+
+
+		</script>
+		
+	</body>
+</html>
